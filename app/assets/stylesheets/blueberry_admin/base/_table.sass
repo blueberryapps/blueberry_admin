@@ -1,0 +1,126 @@
+/*
+ * Component: Table
+ * ----------------
+ */
+
+.table
+  //Cells
+  > thead,
+  > tbody,
+  > tfoot
+    > tr
+      > th,
+      > td
+        max-width: 230px
+        border-top: 1px solid $box-border-color
+        outline: none
+      > td
+        min-height: 18px
+        vertical-align: middle
+
+  > thead > tr > th
+    border-bottom: 2px solid $box-border-color
+
+//Bordered Table
+.table-bordered
+  border: 1px solid $box-border-color
+  > thead,
+  > tbody,
+  > tfoot
+    > tr
+      > th,
+      > td
+        border: 1px solid $box-border-color
+
+
+
+  > thead > tr
+    > th,
+    > td
+      border-bottom-width: 2px
+
+.table.no-border
+  &,
+  td,
+  th
+    border: 0
+
+
+
+// .text-center in tables
+table.text-center
+  &,
+  td,
+  th
+    text-align: center
+
+.table.align
+  th
+    text-align: left
+
+  td
+    text-align: right
+
+// custom cells
+.table
+
+  td.action-buttons
+    text-align: right
+    +render-to(sm, md, lg)
+      white-space: nowrap
+    .btn + .btn
+      margin-left: 0.5em
+
+  td
+    .price, .number
+      min-width: 120px
+      text-align: right
+      display: inline-block
+
+  td.state
+    max-width: 80px
+    .glyphicon-ok
+      color: $brand-success
+    .glyphicon-remove
+      color: $brand-danger
+
+// sortable table
+table.dataTable
+
+  thead
+    .sorting,
+    .sorting_asc,
+    .sorting_desc
+      cursor: pointer
+
+      span
+        padding-right: 20px
+        display: block
+        position: relative
+        &:before,
+        &:after
+          content: ""
+          width: 0
+          height: 0
+          position: absolute
+          top: 50%
+          right: 0
+          border-style: solid
+        &:before
+          border-width: 0 4px 6px 4px
+          border-color: transparent transparent $gray-lighter transparent
+          transform: translate(0, -6px)
+        &:after
+          border-width: 6px 4px 0 4px
+          border-color: $gray-lighter transparent transparent transparent
+          transform: translate(0, 1px)
+
+    .sorting_desc
+      span
+        &:before
+          border-bottom-color: $brand-warning
+
+    .sorting_asc
+      span
+        &:after
+          border-top-color: $brand-warning

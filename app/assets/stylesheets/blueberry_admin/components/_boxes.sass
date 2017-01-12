@@ -1,0 +1,132 @@
+//
+// Layout boxes
+// ---------------------------------
+
+.box
+  margin: 0 0 30px
+  padding: 0
+  clear: both
+
+  &.collapsed
+    &:after,
+    &:before
+      display: table
+
+    .box-content
+      display: none
+
+    .fa.fa-chevron-up:before
+      content: "\f078"
+
+    .fa.fa-chevron-down:before
+      content: "\f077"
+
+.box-header
+  margin-bottom: 0
+  padding: 14px 0 7px
+  min-height: 48px
+  border-color: $border-color
+  border-style: solid solid none
+  border-width: 1px
+  background-color: $ibox-title-bg
+  color: inherit
+  +clearfix
+
+  h3
+    margin-top: 5px
+
+  .heading,
+  .actions
+    +make-columns(sm6)
+    padding: 0 20px
+
+  .actions
+    text-align: right
+
+    .btn + .btn
+      margin-left: 0.5em
+
+.box-content
+  background-color: $ibox-content-bg
+  color: inherit
+  padding: 0 20px
+  border-color: $border-color
+  border-image: none
+  border-style: solid
+  border-width: 1px
+  clear: both
+  &:before
+    content: ""
+    margin-bottom: 35px
+    display: block
+  &:after
+    content: ""
+    margin-top: 35px
+    display: block
+
+  hr
+    border-top: 1px dashed $border-color
+
+.box-footer,
+  padding: 20px 20px
+  font-size: 90%
+  border: 1px solid $border-color
+  border-top: none
+  background: #ffffff
+  color: inherit
+  background: white
+
+  .for-horizontal-form
+    padding-left: 200px
+
+  .btn + .btn
+    margin-left: 1em
+
+  form
+    display: inline-block
+    & + form
+      margin-left: 1em
+
+.box-heading
+  background-color: #f3f6fb
+  border-bottom: none
+
+.box-heading h3
+  font-weight: 200
+  font-size: 24px
+
+.box-title h5
+  display: inline-block
+  font-size: 14px
+  margin: 0 0 7px
+  padding: 0
+  text-overflow: ellipsis
+  float: left
+
+.box-title .label
+  float: left
+  margin-left: 4px
+
+.box-tools
+  display: block
+  float: none
+  margin-top: 0
+  position: relative
+  padding: 0
+  text-align: right
+
+  a
+    cursor: pointer
+    margin-left: 5px
+    color: #c4c4c4
+
+  .btn-primary
+    color: #fff
+
+  .dropdown-menu > li > a
+    padding: 4px 10px
+    font-size: 12px
+
+  &.open > .dropdown-menu
+    left: auto
+    right: 0

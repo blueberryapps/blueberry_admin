@@ -1,0 +1,57 @@
+/*
+ * Component: Products List
+ * ------------------------
+ */
+
+.product-list
+    margin: 0 0 20px
+    padding: 0
+    list-style: none
+    display: flex
+    flex-wrap: wrap
+
+.product-list__item
+  padding: 30px
+  margin-bottom: 30px
+  position: relative
+  width: 25%
+  border-right: 1px dashed $blue
+  +render-to($order-break-point)
+    width: 33.3333%
+
+  h3
+    margin-top: 0
+
+  .quantity
+    input
+      width: 100px
+
+  .wholesale-package,
+  .quantity,
+  .price
+    margin-bottom: 10px
+
+    strong
+      display: block
+
+  .form-inline .form-control
+    width: 60px
+
+  .btn
+    display: inline-block
+
+  .price--big
+    font-size: 18px
+
+    strong
+      font-size: 14px
+
+
+.product-list__item:nth-child(4n)
+  border-right: 1px dashed #ffffff
+  +render-to($order-break-point)
+    border-right: 1px dashed $blue
+
+.product-list__item:nth-child(3n)
+  +render-to($order-break-point)
+    border-right: 1px dashed #ffffff

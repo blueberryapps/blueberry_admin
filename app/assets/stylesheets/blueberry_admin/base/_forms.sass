@@ -1,0 +1,130 @@
+//
+// Forms
+// ---------------------------------
+
+.form-control
+  width: 100%
+  height: 38px
+  display: block
+  border: 1px solid darken($gray-lighter, 5%)
+  border-radius: 1px
+  color: inherit
+  background: white
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s
+
+textarea.form-control
+    min-height: 280px
+
+select.form-control
+    appearance: none
+
+.form-control:focus, .single-line:focus
+  border-color: $navy !important
+
+.has-success .form-control
+  border-color: $navy
+
+.has-warning .form-control
+  border-color: $yellow
+
+.has-error .form-control
+  border-color: $red
+
+.has-success .control-label
+  color: $navy
+
+.has-warning .control-label
+  color: $yellow
+
+.has-error .control-label
+  color: $red
+
+.input-group-addon
+  background-color: white
+  border: 1px solid darken($gray-lighter, 5%)
+  border-radius: 1px
+  color: inherit
+  font-size: 14px
+  font-weight: 400
+  line-height: 1
+  padding: 6px 12px
+  text-align: center
+
+// variants
+.form-horizontal
+  +render-to(sm, md, lg)
+    legend
+      padding: 0 30px 0 0
+      width: 200px
+      font-size: 16px
+      font-weight: bold
+      text-align: right
+      display: inline-block
+      border: none
+      color: $brand-primary
+
+    .form-group
+      margin-left: 0
+      margin-right: 0
+      clear: both
+
+    .control-label
+      margin: 0
+      padding-right: 30px
+      float: left
+      width: 200px
+
+    .form-control-wrapper
+      margin-left: 200px
+      width: calc(100% - 190px)
+      max-width: 350px
+      display: block
+      position: relative
+
+    .text .form-control-wrapper
+      max-width: 600px
+
+    .form-control-holder
+      margin-left: 200px
+
+      .form-control
+        margin-left: 0
+
+      .control-label
+        width: auto
+        float: none
+
+    .checkbox
+      margin-left: 200px
+
+    .help-block
+      margin-left: 200px
+
+    .gallery
+      margin-bottom: 20px
+
+.form-inline
+  +render-to(sm, md, lg)
+    .form-group
+      margin-right: 1em
+
+    .control-label
+      margin-right: 0.5em
+
+    .form-control-wrapper
+      display: inline-block
+
+.inliners
+  width: 100%
+  height: 55px
+  position: relative
+  clear: both
+  & > .form-group
+    float: left
+    clear: none
+    &:first-child
+      margin-right: 30px
+    .form-inline
+      float: left
+  .checkbox
+    margin-left: 30px

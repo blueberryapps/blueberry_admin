@@ -10,16 +10,14 @@ body
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   font-weight: 400
-  overflow-x: hidden
-  overflow-y: auto
-
+  overflow: auto
 
 /* Layout */
 .wrapper
   @include clearfix
   min-height: 100vh
   position: relative
-  overflow: hidden !important
+  overflow: visible !important
   .layout-boxed &
     max-width: 1250px
     margin: 0 auto

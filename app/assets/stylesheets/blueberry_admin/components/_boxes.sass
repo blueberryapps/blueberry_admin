@@ -5,12 +5,22 @@
 .box
   margin: 0 0 30px
   padding: 0
+  position: relative
+  background: white
+  border: 1px solid #e7eaec
   clear: both
 
+  &::after
+    content: ""
+    height: 15px
+    display: block
+
+  // deprecated
   &.collapsed
     &:after,
     &:before
       display: table
+      height: auto
 
     .box-content
       display: none
@@ -25,9 +35,7 @@
   margin-bottom: 0
   padding: 14px 0 7px
   min-height: 48px
-  border-color: $border-color
-  border-style: solid solid none
-  border-width: 1px
+  border: none
   background-color: $ibox-title-bg
   color: inherit
   +clearfix
@@ -47,13 +55,16 @@
       margin-left: 0.5em
 
 .box-content
+  margin-bottom: 15px
+  padding: 0 20px
+  border-image: none
+  border-color: $border-color
+  border-style: solid
+  border-width: 0
+  border-top-width: 1px
+  border-bottom-width: 1px
   background-color: $ibox-content-bg
   color: inherit
-  padding: 0 20px
-  border-color: $border-color
-  border-image: none
-  border-style: solid
-  border-width: 1px
   clear: both
   &:before
     content: ""
@@ -63,21 +74,39 @@
     content: ""
     margin-top: 35px
     display: block
+  &:first-child
+    border-top: none
+  &:last-child
+    margin-bottom: 0
+    border-bottom: none
 
   hr
-    border-top: 1px dashed $border-color
+    border-top: 1px dashed $gray-lighter
 
 .box-footer,
-  padding: 20px 20px
+  padding: 5px 20px
   font-size: 90%
-  border: 1px solid $border-color
-  border-top: none
   background: #ffffff
   color: inherit
-  background: white
+  background: rgba(255, 255, 255, 0.92)
+  z-index: 1000
+
+  &.sticky
+    position: sticky
+    bottom: 0
+    transition: all 0.4s
+
+  &.sticked
+    background: rgba(#2F2D2E, 0.95)
+
+    .btn
+      @extend .btn-sm
 
   .for-horizontal-form
     padding-left: 200px
+
+  .btn
+    transition: all 0.4s
 
   .btn + .btn
     margin-left: 1em

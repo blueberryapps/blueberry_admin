@@ -1,3 +1,3 @@
 module BlueberryAdmin
-  VERSION = '0.1.1.7'
+  VERSION = '0.1.1.8'
 end

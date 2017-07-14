@@ -76,7 +76,7 @@ select.form-control
 
     .form-control-wrapper
       margin-left: 200px
-      width: calc(100% - 190px)
+      width: calc(100% - 200px)
       max-width: 350px
       display: block
       position: relative
@@ -128,3 +128,34 @@ select.form-control
       float: left
   .checkbox
     margin-left: 30px
+
+.checkbox
+  input[type="checkbox"]
+    margin: 0
+    top: 5px
+    left: 0
+
+.form-horizontal
+  .checkbox,
+  .radio
+    input[type="checkbox"]
+      top: 12px
+
+.checkbox-inline
+  .checkbox
+    input[type="checkbox"]
+      top: 8px
+
+textarea.form-control
+  min-height: 100px
+
+select.form-control
+  background: white image_url('admin/arrow-bottom.png') no-repeat right center
+
+  &[multiple="multiple"]
+    background: white
+
+abbr[title],
+abbr[data-original-title]
+  border: none
+  text-decoration: none

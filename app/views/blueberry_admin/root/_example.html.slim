@@ -1,0 +1,3 @@
+- file = File.join(__dir__, 'examples', "_#{name}.html.slim")
+= render file: file
+= CodeRay.scan(File.read(file), :slim).div.html_safe

@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    / = metamagic site: 'blueberry_admin-temp',
+    /   title: [:title, :site],
+    /   separator: ' – ',
+    /   og: { image: image_url('blueberry-logo.png') }
+    meta charset='utf-8'
+    meta name='viewport' content='width=device-width, initial-scale=1.0'
+    = stylesheet_link_tag :admin, media: 'all'
+    = csrf_meta_tags
+
+  body
+    .wrapper
+
+      .sidebar
+        = render 'application/nav_left'
+
+      .content-wrapper
+        .header
+          = render 'application/nav_top'
+        = yield
+
+    = javascript_include_tag :application
+    = yield :javascript

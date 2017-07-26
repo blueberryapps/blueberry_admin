@@ -1,0 +1,26 @@
+.well.well-sm
+  .form-group.string.optional.page_blocks_links_title
+    label.control-label Title
+    .form-control-wrapper
+      input.form-control type="text" /
+  .form-group
+    label.control-label Description
+    .form-control-wrapper
+      textarea.form-control
+  .form-group
+    label.control-label Url
+    .form-control-wrapper
+      input.form-control type="url"
+  .form-group.select
+    label.control-label Page
+    .form-control-wrapper
+      select.form-control
+        option
+        option Úvod
+        option O společnosti
+  .form-group
+    label.control-label Image
+    input type="file" /
+  = link_to "#", class: "btn btn-default btn-sm"
+    i.glyphicon.glyphicon-remove
+    | Odebrat odkaz

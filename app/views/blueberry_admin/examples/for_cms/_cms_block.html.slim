@@ -1,0 +1,17 @@
+.panel.panel-default
+  .panel-heading
+    .row
+      .col-sm-6
+        i.glyphicon.glyphicon-resize-vertical draggable="true"
+      .col-sm-6.text-right
+        .panel-actions
+          = link_to "#toggle-70279161023140", aria: {expanded: "true"}, data: {toggle: "collapse"}
+            i.glyphicon.glyphicon-resize-small title="Collapse"
+          = link_to "#"
+            i.glyphicon.glyphicon-trash title="Odebrat blok"
+  .collapse.in id="toggle-70279161023140"
+    .panel-body
+      .form-group
+        label.control-label Label
+        .form-control-wrapper
+          input.form-control type="text" /

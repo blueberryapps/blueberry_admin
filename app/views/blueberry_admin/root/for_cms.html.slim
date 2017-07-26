@@ -14,63 +14,25 @@
       .heading
         h3 Tree of pages
     .box-content
-      ul.pages.pages-tree aria-dropeffect="move" data-sortable-id="0" data-url="/admin/pages"
-        li aria-grabbed="false" data-id="589c8b19d3e29600042e5632" data-item-sortable-id="0" role="option"
-          .pages-tree__row
-            .col-icon
-              i.glyphicon.glyphicon-resize-vertical draggable="true"
-            .col-name
-              a href="/admin/pages/uvod/edit"
-                strong Úvod
-                span
-                  i.glyphicon.glyphicon-pencil
-                  span.translation_missing title=("translation missing: cs.blueberry_cms.admin.pages.page.edit")  Edit
-            .col-info
-              i.glyphicon.glyphicon-ok title=("Zobrazeno v menu")
-              i.glyphicon.glyphicon-remove title=("Skryto v patičce")
-            .col-actions
-              a.btn.btn-sm.btn-secondary href="/cs/" target="_blank"
-                i.glyphicon.glyphicon-eye-open
-                | Náhled
-              '
+      = render 'example', name: 'page_tree'
 
+  .box
+    .box-header
+      .heading
+        h3 CMS block
+    .box-content
+      = render 'example', name: 'cms_block'
 
+  .box
+    .box-header
+      .heading
+        h3 Well
+    .box-content
+      = render 'example', name: 'well'
 
-              a.btn.btn-sm.btn-default href="/admin/pages/new?parent_id=589c8b19d3e29600042e5632"
-                i.glyphicon.glyphicon-plus
-                | Přidat podstránku
-              '
-              a.btn.btn-sm.btn-default data-method="delete" data-sweet-alert-confirm=("Jste si jistý/á?") disabled="disabled" href="#" rel="nofollow"
-                i.glyphicon.glyphicon-remove
-                | Smazat
-          ul.pages aria-dropeffect="move" data-sortable-id="1"
-            li aria-grabbed="false" data-id="589c8b19d3e29600042e5634" data-item-sortable-id="1" role="option"
-              .pages-tree__row
-                .col-icon
-                  i.glyphicon.glyphicon-resize-vertical draggable="true"
-                .col-name
-                  a href="/admin/pages/o-spolecnosti/edit"
-                    strong O společnosti
-                    span
-                      i.glyphicon.glyphicon-pencil
-                      span.translation_missing title=("translation missing: cs.blueberry_cms.admin.pages.page.edit")  Edit
-                .col-info
-                  i.glyphicon.glyphicon-ok title=("Zobrazeno v menu")
-                  i.glyphicon.glyphicon-ok title=("Zobrazeno v patičce")
-                .col-actions
-                  a.btn.btn-sm.btn-secondary href="/cs/o-spolecnosti" target="_blank"
-                    i.glyphicon.glyphicon-eye-open
-                    | Náhled
-                  '
-                  a.btn.btn-sm.btn-default href="/admin/pages/new?parent_id=589c8b19d3e29600042e5634"
-                    i.glyphicon.glyphicon-plus
-                    | Přidat podstránku
-                  '
-                  a.btn.btn-sm.btn-default data-method="delete" data-sweet-alert-confirm=("Jste si jistý/á?") href="/admin/pages/o-spolecnosti" rel="nofollow"
-                    i.glyphicon.glyphicon-remove
-                    | Smazat
-            = render 'example', name: 'article_detail_header'
-
-            = render 'example', name: 'article_detail_header'
-            = render 'example', name: 'article_detail_header'
-            = render 'example', name: 'article_detail_header'
+  .box
+    .box-header
+      .heading
+        h3 Gallery
+    .box-content
+      = render 'example', name: 'gallery'

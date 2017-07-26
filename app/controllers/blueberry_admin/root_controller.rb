@@ -3,5 +3,11 @@ module BlueberryAdmin
 
     def index
     end
+
+    def components
+    end
+
+    def basic
+    end
   end
 end

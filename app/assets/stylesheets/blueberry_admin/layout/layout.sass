@@ -41,8 +41,9 @@ body
   //Using disposable variable to join statements with a comma
   $transition-rule: $transition-speed $transition-fn, margin $transition-speed $transition-fn
   @include transition-transform($transition-rule)
-  margin-left: $sidebar-width
+  padding-left: $sidebar-width
   z-index: 820
+  transition: all 0.3s ease
   //Top nav layout
   .layout-top-nav &
     margin-left: 0

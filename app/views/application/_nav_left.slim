@@ -1,0 +1,14 @@
+ul.sidebar-menu
+  li.logo = link_to image_tag('blueberry-logo.png'), '#'
+  li
+    = link_to for_cms_path
+      span.glyphicon.glyphicon-cog
+      | For CMS
+  li
+    = link_to components_path
+      span.glyphicon.glyphicon-cog
+      | Components
+  li
+    = link_to basic_path
+      span.glyphicon.glyphicon-cog
+      | Basic

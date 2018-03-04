@@ -1,0 +1,38 @@
+.content-header
+  h1
+    span.glyphicon.glyphicon-cog
+    span.text< For CMS
+  ol.breadcrumb
+    li
+      a href='/admin'
+        | Home
+    li.active
+      strong For CMS
+.content
+  .box
+    .box-header
+      .heading
+        h3 Tree of pages
+    .box-content
+      = render 'example', name: 'page_tree'
+
+  .box
+    .box-header
+      .heading
+        h3 CMS block
+    .box-content
+      = render 'example', name: 'cms_block'
+
+  .box
+    .box-header
+      .heading
+        h3 Well
+    .box-content
+      = render 'example', name: 'well'
+
+  .box
+    .box-header
+      .heading
+        h3 Gallery
+    .box-content
+      = render 'example', name: 'gallery'

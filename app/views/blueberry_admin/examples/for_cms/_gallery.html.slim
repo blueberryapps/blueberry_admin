@@ -1,0 +1,22 @@
+.form-group.text
+  label.string Galerie
+  .form-control-wrapper
+    .gallery
+      .gallery__input
+        input multiple="multiple" type="file" /
+      - 8.times do
+        .gallery__item
+          .attachment-file
+            .well.well-sm
+              .attachment
+                .preview
+                  = image_tag "sample-gallery-preview,jpg", alt: ""
+                .form-group
+                  .form-control-wrapper
+                    input.form-control type="text" /
+                ul.list-inline
+                  li.actions
+                    .form-group.boolean
+                      .checkbox
+                        input type="checkbox" /
+                        label Odstranit soubor

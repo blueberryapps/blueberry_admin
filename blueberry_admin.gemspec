@@ -16,6 +16,9 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*", 'MIT-LICENSE', 'Rakefile', 'README.md']
 
+
+  s.add_development_dependency 'coderay', '~> 1.1'
+
   s.add_dependency 'rails', '>= 5.0.0.1'
   s.add_dependency 'sassc-rails', '>= 1.3.0'
 end

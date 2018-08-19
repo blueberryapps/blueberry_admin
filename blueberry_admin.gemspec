@@ -14,8 +14,10 @@ Gem::Specification.new do |s|
   s.description = 'Base pack of stylesheets for Bleuberry Administration.'
   s.license     = 'MIT'
 
-  s.files = Dir["{app,config,db,lib}/**/*", 'MIT-LICENSE', 'Rakefile', 'README.md']
+  s.files = Dir["{app,config,db,lib,vendor}/**/*", 'MIT-LICENSE', 'Rakefile', 'README.md']
 
   s.add_dependency 'rails', '>= 5.0.0.1'
   s.add_dependency 'sassc-rails', '>= 1.3.0'
+  s.add_dependency 'bootstrap', '~> 4.1.3'
+  s.add_dependency 'font-awesome-sass', '~> 5.2.0'
 end
